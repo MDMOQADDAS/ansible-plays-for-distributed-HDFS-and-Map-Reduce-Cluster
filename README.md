@@ -6,7 +6,7 @@ This play is very mature to create HDFS and Map Reduce Cluster and the interesti
 Architecture
 ============
 
-
+![architecture](https://github.com/MDMOQADDAS/Private-Images/blob/main/j1.png)
 
 Requirements
 ------------

@@ -1,7 +1,12 @@
-Role Name
+Create Distributed Hadoop Cluster and Map Reduce
 =========
 
-A brief description of the role goes here.
+This play is very mature to create HDFS and Map Reduce Cluster and the interesting thing here is to it automatically connect with master to worker or Job Tracke to Task Tracker on the fly.
+
+Architecture
+============
+
+
 
 Requirements
 ------------

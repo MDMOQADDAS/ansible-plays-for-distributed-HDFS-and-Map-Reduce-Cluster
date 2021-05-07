@@ -5,7 +5,7 @@ This play is very mature to create HDFS and Map Reduce Cluster and the interesti
 
 Architecture
 ============
-# Step 1 : First it lauch one instance over AWS <br/><br/>
+#### Step 1 : First it lauch one instance over AWS <br/><br/>
 # Step 2 : Dynamically remote login and download Hadoop and JDK rpm Package<br/><br/>
 # step 3 : Create AMI Image of above instance<br/><br/>
 # step 4 : Now launch cluster instances as you required but all the image lauch by own created AMI Image<br/><br/>

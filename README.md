@@ -5,8 +5,20 @@ This play is very mature to create HDFS and Map Reduce Cluster and the interesti
 
 Architecture
 ============
+Step 1 : First it lauch one instance over AWS
+Step 2 : Dynamically remote login and download Hadoop and JDK rpm Package
+step 3 : Create AMI Image of above instance
+step 4 : Now launch cluster instances as you required but all the image lauch by own created AMI Image
+step 5 : Configure one of them as a HDFS Master Node (No need to tell it automatically fetch by using tags)
+step 6 : Configure some instance as as HDFS Slave Node (No need to tell it automatically fetch by using tags)
+step 7 : Configure one of them as Job Tracker (No need to tell it automatically fetch by using tags)
+step 8 : Configure some of them as a Task Tracker (No need to tell it automatically fetch by using tags)
+step 9 : Configure one of them as a entire cluster client (No need to tell it automatically fetch by using tags)
 
-![architecture](https://github.com/MDMOQADDAS/Private-Images/blob/main/j1.png)
+Now your cluster ready
+
+
+![architecture](https://github.com/MDMOQADDAS/Private-Images/blob/main/j.png)
 
 Requirements
 ------------

@@ -17,9 +17,6 @@ Architecture
 
 Welcome Your cluster ready!!
 
-
-![architecture](https://github.com/MDMOQADDAS/Private-Images/blob/main/j.png)
-
 Requirements
 ------------
 
@@ -27,7 +24,6 @@ Requirements
 1. pip3 install awscli <br/><br/>
 2. pip3 install boto3 <br/><br/>
 3. pip3 install boto <br/><br/>
-4. pip3 install ec2 <br/><br/>
 Note -:) To download above package you must download python installer or update it.
 
 #### Step 2 : Create an AWS IAM user and assign EC2 permission or you can assign the common "power user access", It releated to your AWS account Security so that how to manage its your choice.
@@ -38,6 +34,10 @@ Note -:) To download above package you must download python installer or update 
 
 #### Note-:) Select the by default region here so that all the operation will in default region.
 
+#### step 4 : Now Just run the one commond your entire cluster ready
+Command -: python3 auto.py (This commond should be run inside "hdfs-map-reduce-play" folder)
+
+![]()
 License
 -------
 

@@ -23,29 +23,20 @@ Welcome Your cluster ready!!
 Requirements
 ------------
 
-#### Install below package
+#### Step 1 : Install below package
 1. pip3 install awscli <br/><br/>
 2. pip3 install boto3 <br/><br/>
-3. pip3 install ec2 <br/><br/>
+3. pip3 install boto <br/><br/>
+4. pip3 install ec2 <br/><br/>
+Note -:) To download above package you must download python installer or update it.
 
-Role Variables
---------------
+#### Step 2 : Create an AWS IAM user and assign EC2 permission or you can assign the common "power user access", It releated to your AWS account Security so that how to manage its your choice.
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+#### step 3 : Now when you'll create and AWS IAM user at that time they will given ACCESS Key and Secrete Key copy them and run command
 
-Dependencies
-------------
+![aws configure](https://github.com/MDMOQADDAS/Private-Images/blob/main/awsconfigure.png)
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
-
-Example Playbook
-----------------
-
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+#### Note-:) Select the by default region here so that all the operation will in default region.
 
 License
 -------

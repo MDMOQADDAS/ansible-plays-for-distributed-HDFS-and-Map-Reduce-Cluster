@@ -15,7 +15,7 @@ Architecture
 #### step 8 : Configure some of them as a Task Tracker (No need to tell it automatically fetch by using tags)<br/><br/>
 #### step 9 : Configure one of them as a entire cluster client (No need to tell it automatically fetch by using tags)<br/><br/>
 
-Now your cluster ready
+Welcome Your cluster ready!!
 
 
 ![architecture](https://github.com/MDMOQADDAS/Private-Images/blob/main/j.png)
@@ -23,7 +23,10 @@ Now your cluster ready
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+#### Install below package
+1. pip3 install awscli <br/><br/>
+2. pip3 install boto3 <br/><br/>
+3. pip3 install ec2 <br/><br/>
 
 Role Variables
 --------------

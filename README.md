@@ -39,7 +39,9 @@ Note -:) To download above package you must download python installer or update 
 Note -:) After copy the key in Linux ren below command to permit the key.
 ### Command-: chmod +400 key_name.pem
 
-#### step 5 : 
+#### step 5 : Go Inside folder 
+
+![maininstancevars](https://github.com/MDMOQADDAS/Private-Images/blob/main/maininstancevar.png)
 
 #### step 4 : Now Just run the one commond your entire cluster ready
 Command -: python3 auto.py (This commond should be run inside "hdfs-map-reduce-play" folder)

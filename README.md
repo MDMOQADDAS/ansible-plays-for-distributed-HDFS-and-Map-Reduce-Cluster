@@ -18,34 +18,39 @@ Architecture
 Welcome Your cluster ready!!
 
 Requirements
-------------
+============ 
 
-#### Step 1 : Install below packages
+Step 1 : Install below packages
+------------------------------- 
 1. pip3 install awscli <br/><br/>
 2. pip3 install boto3 <br/><br/>
 3. pip3 install boto <br/><br/>
 Note -:) To download above package you must download python installer or update it.
 
-#### Step 2 : Create an AWS IAM user and assign EC2 permission or you can assign the common "power user access", It releated to your AWS account Security so that how to manage its your choice.
+Step 2 : Create an AWS IAM user and assign EC2 permission or you can assign the common "power user access", It releated to your AWS account Security so that how to manage its your choice.
+-------------------------------
 
-#### step 3 : Now when you'll create and AWS IAM user at that time they will given ACCESS Key and Secrete Key copy them and run command
+Step 3 : Now when you'll create and AWS IAM user at that time they will given ACCESS Key and Secrete Key copy them and run command
+-------------------------------
 
 ![aws configure](https://github.com/MDMOQADDAS/Private-Images/blob/main/awsconfigure.png)
 
 #### Note-:) Select the by default region here so that all the operation will in default region.
 
-#### step 4 : Create a AWS EC2 private key and put in same folder where all the files contents.
+Step 4 : Create a AWS EC2 private key and put in same folder where all the files contents.
+-------------------------------
 
 Note -:) After copy the key in Linux ren below command to permit the key.
 ### Command-: chmod +400 key_name.pem
-
-#### step 5 : Create a security group in which allow
+Step 5 : Create a security group in which allow
+-------------------------------
 1. All Trafic SSH<br/>
 2. All Trafic Same Security Group id
 
 ![securitygrouppng](https://github.com/MDMOQADDAS/Private-Images/blob/main/securitygroup.png)
 
-#### step 6 : Go Inside folder "maininstance/vars/" and open "main.yml" file
+Step 6 : Go Inside folder "maininstance/vars/" and open "main.yml" file
+-------------------------------
 
 ![maininstancevars](https://github.com/MDMOQADDAS/Private-Images/blob/main/maininstancevar.png)
 
@@ -59,7 +64,8 @@ vpc_subnet_id: subnet-5847a533<br/>
 
 ### Note -:) Replace all the variable value, If you want to change tag then you have to change in other roles also.[Recommended not change tag name]
 
-#### step 7 : Go inside the folder "instances/vars" and open "main.yml"
+Step 7 : Go inside the folder "instances/vars" and open "main.yml"
+-------------------------------
 
 ![instancespng](https://github.com/MDMOQADDAS/Private-Images/blob/main/instancepng.png)
 
@@ -73,20 +79,24 @@ region: ap-south-1 <br/>
 mr_client: 1  -: It means how many client instances you want to create<br/> 
 
 
-#### step 8 : Go inside the folder "hdfsmaster/vars/main.yml" 
+Step 8 : Go inside the folder "hdfsmaster/vars/main.yml" 
+-------------------------------
 
 ![hdfsmaster](https://github.com/MDMOQADDAS/Private-Images/blob/main/hdfsmaster.png)
 
 Note -:) Here You can specify NameNode folder
 
-#### step 9 : Go inside the folder "hdfsslave/vars/main.yml"
+Step 9 : Go inside the folder "hdfsslave/vars/main.yml"
+-------------------------------
 
 ![hdfsslave](https://user-images.githubusercontent.com/69861558/117541882-a0a63580-b033-11eb-8f56-2e9c9f0303d7.png)
 
 Note -:) Here you can specify DataNode folder
 
 
-#### step  : Now Just run the one commond your entire cluster ready
+Step10  : Now Just run the one commond your entire cluster ready
+-------------------------------
+
 Command -: python3 auto.py (This commond should be run inside "hdfs-map-reduce-play" folder)
 
 

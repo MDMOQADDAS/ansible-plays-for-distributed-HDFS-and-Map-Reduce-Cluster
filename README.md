@@ -20,7 +20,7 @@ Welcome Your cluster ready!!
 Requirements
 ------------
 
-#### Step 1 : Install below package
+#### Step 1 : Install below packages
 1. pip3 install awscli <br/><br/>
 2. pip3 install boto3 <br/><br/>
 3. pip3 install boto <br/><br/>
@@ -33,6 +33,13 @@ Note -:) To download above package you must download python installer or update 
 ![aws configure](https://github.com/MDMOQADDAS/Private-Images/blob/main/awsconfigure.png)
 
 #### Note-:) Select the by default region here so that all the operation will in default region.
+
+#### step 4 : Create a AWS EC2 private key and put in same folder where all the files contents.
+
+Note -:) After copy the key in Linux ren below command to permit the key.
+### Command-: chmod +400 key_name.pem
+
+#### step 5 : 
 
 #### step 4 : Now Just run the one commond your entire cluster ready
 Command -: python3 auto.py (This commond should be run inside "hdfs-map-reduce-play" folder)

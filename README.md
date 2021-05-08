@@ -86,15 +86,6 @@ Note -:) Here You can specify NameNode folder
 Note -:) Here you can specify DataNode folder
 
 
-
-
-
-
-
-
-
-
-
 #### step  : Now Just run the one commond your entire cluster ready
 Command -: python3 auto.py (This commond should be run inside "hdfs-map-reduce-play" folder)
 
@@ -107,4 +98,5 @@ BSD
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+LinkedIn -: https://www.linkedin.com/in/mdmoqaddas
+Email -: mdmoqaddas@gmail.com

@@ -49,14 +49,13 @@ Note -:) After copy the key in Linux ren below command to permit the key.
 
 ![maininstancevars](https://github.com/MDMOQADDAS/Private-Images/blob/main/maininstancevar.png)
 
-key_name: hmrkeyap
-security_group: sg_for_hmr_clusture
-instance_type: t2.micro
-image_id: ami-0bcf5425cdc1d8a85
-instance_count: 1
-region: ap-south-1
-vpc_subnet_id: subnet-5847a533
-tag_ami_instance: {"Name": "AMI Instance"}
+key_name: hmrkeyap<br/>
+security_group: sg_for_hmr_clusture<br/>
+instance_type: t2.micro<br/>
+image_id: ami-0bcf5425cdc1d8a85<br/>
+instance_count: 1<br/>
+region: ap-south-1<br/>
+vpc_subnet_id: subnet-5847a533<br/>
 
 ### Note -:) Replace all the variable value, If you want to change tag then you have to change in other roles also.[Recommended not change tag name]
 
@@ -68,10 +67,10 @@ Note -:) Here you can change  <br/>
 key_name: hmrkeyap<br/>
 security_group: sg_for_hmr_clusture<br/>
 instance_type: t2.micro<br/>
-hdfs_instance_count: 2<br/>
-mr_instance_count: 2<br/>
-region: ap-south-1<br/>
-mr_client: 1<br/>
+hdfs_instance_count: 2 -: It means how many HDFS cluster Workder Node You want<br/>
+mr_instance_count: 2 -: It means how many Map-Reduce Job Tracker you want<br/>
+region: ap-south-1 <br/>
+mr_client: 1  -: It means how many client instances you want to create<br/> 
 
 
 

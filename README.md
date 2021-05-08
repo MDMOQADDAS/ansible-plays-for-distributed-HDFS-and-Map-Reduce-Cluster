@@ -39,14 +39,60 @@ Note -:) To download above package you must download python installer or update 
 Note -:) After copy the key in Linux ren below command to permit the key.
 ### Command-: chmod +400 key_name.pem
 
-#### step 5 : Go Inside folder 
+#### step 5 : Create a security group in which allow
+1. All Trafic SSH<br/>
+2. All Trafic Same Security Group id
+
+![securitygrouppng](https://github.com/MDMOQADDAS/Private-Images/blob/main/securitygroup.png)
+
+#### step 6 : Go Inside folder "maininstance/vars/" and open "main.yml" file
 
 ![maininstancevars](https://github.com/MDMOQADDAS/Private-Images/blob/main/maininstancevar.png)
 
-#### step 4 : Now Just run the one commond your entire cluster ready
+key_name: hmrkeyap
+security_group: sg_for_hmr_clusture
+instance_type: t2.micro
+image_id: ami-0bcf5425cdc1d8a85
+instance_count: 1
+region: ap-south-1
+vpc_subnet_id: subnet-5847a533
+tag_ami_instance: {"Name": "AMI Instance"}
+
+### Note -:) Replace all the variable value, If you want to change tag then you have to change in other roles also.[Recommended not change tag name]
+
+#### step 7 : Go inside the folder "instances/vars" and open "main.yml"
+
+![instancespng](https://github.com/MDMOQADDAS/Private-Images/blob/main/instancepng.png)
+
+Note -:) Here you can change  <br/>
+key_name: hmrkeyap<br/>
+security_group: sg_for_hmr_clusture<br/>
+instance_type: t2.micro<br/>
+hdfs_instance_count: 2<br/>
+mr_instance_count: 2<br/>
+region: ap-south-1<br/>
+mr_client: 1<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### step  : Now Just run the one commond your entire cluster ready
 Command -: python3 auto.py (This commond should be run inside "hdfs-map-reduce-play" folder)
 
-![]()
+
 License
 -------
 

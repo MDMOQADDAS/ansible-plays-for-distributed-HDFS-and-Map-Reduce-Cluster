@@ -73,10 +73,17 @@ region: ap-south-1 <br/>
 mr_client: 1  -: It means how many client instances you want to create<br/> 
 
 
+#### step 8 : Go inside the folder "hdfsmaster/vars/main.yml" 
 
+![hdfsmaster](https://github.com/MDMOQADDAS/Private-Images/blob/main/hdfsmaster.png)
 
+Note -:) Here You can specify NameNode folder
 
+#### step 9 : Go inside the folder "hdfsslave/vars/main.yml"
 
+![hdfsslave](https://user-images.githubusercontent.com/69861558/117541882-a0a63580-b033-11eb-8f56-2e9c9f0303d7.png)
+
+Note -:) Here you can specify DataNode folder
 
 
 

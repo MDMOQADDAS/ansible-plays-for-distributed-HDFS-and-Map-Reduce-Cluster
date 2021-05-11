@@ -99,6 +99,8 @@ Step10  : Now Just run the one commond your entire cluster ready
 
 Command -: python3 auto.py (This commond should be run inside "hdfs-map-reduce-play" folder)
 
+![image](https://user-images.githubusercontent.com/69861558/117814013-65994180-b281-11eb-8cfd-59bfeed1e312.png)
+
 
 License
 -------

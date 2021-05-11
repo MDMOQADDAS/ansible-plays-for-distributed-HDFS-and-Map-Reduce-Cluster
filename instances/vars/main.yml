@@ -1,0 +1,16 @@
+---
+# vars file for instances
+key_name: hmrkeyap
+security_group: sg_for_hmr_clusture
+instance_type: t2.micro
+hdfs_instance_count: 2
+mr_instance_count: 2
+region: ap-south-1
+vpc_subnet_id: subnet-5847a533
+tag_hdfs_master: {"Name": "HDFS Master Node"}
+tag_hdfs_slave: {"Name": "HDFS Slave Node"}
+tag_M_R_Master: {"Name": "Map Reduce Job Tracker"}
+tag_M_R_Slave: {"Name": "Map Reduce Task Tracker"}
+tag_Hadoop_Map_Reduce_Client: {"Name": "Hadoop Map Reduce Client"}
+mr_client: 1
+

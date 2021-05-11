@@ -1,0 +1,4 @@
+- hosts: tag_Name_HDFS_Master_Node
+  roles:
+   - hdfsmaster
+

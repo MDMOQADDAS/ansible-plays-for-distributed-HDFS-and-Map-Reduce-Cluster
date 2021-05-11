@@ -1,0 +1,18 @@
+- name: "Creating a directory"
+  file:
+     name: "{{dir}}"
+     state: directory
+- name: "Configuring hdfs-site.xml file"
+  template:
+     src: "hdfs-site.xml"
+     dest: "/etc/hadoop/hdfs-site.xml"
+- name: "Configuring core-site.xml file"
+  template:
+     src: "core-site.xml"
+     dest: "/etc/hadoop/core-site.xml"
+- name: "Formating Namenode because first time we have to do"
+  shell: "echo Y | hadoop namenode -format"
+- name: "Now Finally Starting the Service"
+  shell: "hadoop-daemon.sh start namenode"
+- name: "Starting Permanently if you shutdown again start it will work"
+  shell: "echo hadoop-daemon.sh start namenode >> /root/.bashrc"

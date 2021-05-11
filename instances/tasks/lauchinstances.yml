@@ -1,0 +1,81 @@
+- name: "Gathering AMI id so that we can use own AMI"
+  amazon.aws.ec2_ami_info:
+    filters:
+          "tag:Name": Hadoop Map Reduce
+  register: amiid
+- debug:
+     var: amiid.images.0.image_id
+
+- name: "Launching HDFS  Master Node"  
+  ec2:
+      key_name: "{{ key_name  }}"
+      instance_type: "{{ instance_type }}"
+      image: "{{ amiid.images.0.image_id }}"
+      count: 1
+      assign_public_ip: yes
+      region: "{{region}}"
+      vpc_subnet_id: "{{ vpc_subnet_id }}"
+      instance_tags: "{{ tag_hdfs_master }}"
+      group: "{{security_group}}"
+  register: hdfsmaster
+- name: "Saving HDFS Master IP so that we can configure slave node"
+  shell: "echo hdfsmasterip: {{hdfsmaster.instances.0.private_ip }} > hdfsslave/vars/main.yml "
+- name: "Saving HDFS Master IP so that we can configure Client node"
+  shell: "echo hdfsmasterip: {{hdfsmaster.instances.0.private_ip }} > client/vars/main.yml"
+- name: "Saving HDFS Master IP so that we can configure Client node"
+  shell: "echo hdfsmasterip: {{hdfsmaster.instances.0.private_ip }} > mrjobtracker/vars/main.yml"
+
+
+- name: "Launching HDFS Slave Node"
+  ec2:
+      key_name: "{{ key_name  }}"
+      instance_type: "{{ instance_type }}"
+      image: "{{ amiid.images.0.image_id }}"
+      count: "{{ hdfs_instance_count }}"
+      assign_public_ip: yes
+      region: "{{region}}"
+      vpc_subnet_id: "{{ vpc_subnet_id }}"
+      instance_tags: "{{ tag_hdfs_slave }}"
+      group: "{{security_group}}"
+
+- name: "Launching Map-Reduce Job Tracker"
+  ec2:
+      key_name: "{{ key_name  }}"
+      instance_type: "{{ instance_type }}"
+      image: "{{ amiid.images.0.image_id }}"
+      count: 1
+      assign_public_ip: yes
+      region: "{{region}}"
+      vpc_subnet_id: "{{ vpc_subnet_id }}"
+      instance_tags: "{{ tag_M_R_Master}}"
+      group: "{{security_group}}"
+  register: jobtracker
+- name: "Saving Job Tracker IP so that we can configure Task Tracker"
+  shell: "echo jobtrackerip: {{jobtracker.instances.0.private_ip }} > mrtasktracker/vars/main.yml "
+    
+- name: "Saving Job Tracker IP so that we can configure Client"
+  shell: "echo jobtrackerip: {{jobtracker.instances.0.private_ip }} >> client/vars/main.yml"
+
+- name: "Launching Map-Reduce Task Tracker"
+  ec2:
+      key_name: "{{ key_name  }}"
+      instance_type: "{{ instance_type }}"
+      image: "{{ amiid.images.0.image_id }}"
+      count: "{{ mr_instance_count }}"
+      assign_public_ip: yes
+      region: "{{region}}"
+      vpc_subnet_id: "{{ vpc_subnet_id }}"
+      instance_tags: "{{ tag_M_R_Slave}}"
+      group: "{{security_group}}"
+- name: "Lauching a Map-Reduce Client"
+  ec2:
+      key_name: "{{ key_name  }}"
+      instance_type: "{{ instance_type }}"
+      image: "{{ amiid.images.0.image_id }}"
+      count: "{{ mr_client }}"
+      assign_public_ip: yes
+      region: "{{region}}"
+      vpc_subnet_id: "{{ vpc_subnet_id }}"
+      instance_tags: "{{ tag_Hadoop_Map_Reduce_Client}}"
+      group: "{{security_group}}"
+

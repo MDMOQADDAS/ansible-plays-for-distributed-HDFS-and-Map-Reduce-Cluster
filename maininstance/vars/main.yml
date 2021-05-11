@@ -1,0 +1,10 @@
+---
+# vars file for maininstance
+key_name: hmrkeyap
+security_group: sg_for_hmr_clusture
+instance_type: t2.micro
+image_id: ami-0bcf5425cdc1d8a85
+instance_count: 1
+region: ap-south-1
+vpc_subnet_id: subnet-5847a533
+tag_ami_instance: {"Name": "AMI Instance"}

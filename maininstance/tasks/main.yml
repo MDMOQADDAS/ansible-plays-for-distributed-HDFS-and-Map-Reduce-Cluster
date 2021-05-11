@@ -1,0 +1,4 @@
+---
+# tasks file for maininstance
+- name: "Including the task for after configuration creat AMI"
+  include_tasks: "ins.yml"

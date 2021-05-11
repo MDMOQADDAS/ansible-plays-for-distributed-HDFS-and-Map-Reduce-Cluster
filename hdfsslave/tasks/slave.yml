@@ -1,0 +1,17 @@
+- name: "Creating a directory"
+  file:
+     name: "/dn"
+     state: directory
+- name: "Configuring hdfs-site.xml file"
+  template:
+     src: "hdfs-site.xml"
+     dest: "/etc/hadoop/hdfs-site.xml"
+- name: "Configuring core-site.xml file"
+  template:
+     src: "core-site.xml"
+     dest: "/etc/hadoop/core-site.xml"
+- name: "Now Finally Starting the Service"
+  shell: "hadoop-daemon.sh start datanode"
+- name: "Starting Permanently if you shutdown again start it will work"
+  shell: "echo hadoop-daemon.sh start datanode >> /root/.bashrc"
+

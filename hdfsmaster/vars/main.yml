@@ -1,0 +1,6 @@
+---
+# vars file for hdfsmaster
+# 
+# dir is variable here, we can change name of namenode directory
+
+dir: /nn

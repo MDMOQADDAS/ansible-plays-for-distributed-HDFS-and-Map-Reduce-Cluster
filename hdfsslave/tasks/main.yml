@@ -1,0 +1,3 @@
+# tasks file for hdfsslave
+- name: "Including tasks to configure HDFS Slave NOde"
+  include_tasks: "slave.yml"

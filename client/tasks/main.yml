@@ -1,0 +1,4 @@
+---
+# tasks file for client
+- name: "Including tasks to configure client"
+  include_tasks: "clusterclient.yml"

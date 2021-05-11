@@ -1,0 +1,20 @@
+- name: "Launching an instance to put Hadoop & JDK"
+  ec2:
+      key_name: "{{ key_name  }}"
+      instance_type: "{{ instance_type }}"
+      image: "{{ image_id }}"
+      count: "{{ instance_count }}"
+      assign_public_ip: yes
+      region: "{{region}}"
+      vpc_subnet_id: "{{ vpc_subnet_id }}"
+      instance_tags: "{{ tag_ami_instance }}"
+      group: "{{security_group}}"
+  register: minstance
+- name: "debugging"
+  debug:
+      var: minstance.instance_ids
+- name: "Mandotry Operation to save instance id"
+  shell: 'echo {{minstance.instance_ids}} | tr -d "[]" '
+  register: instanceid
+- name: "saving instance id for further configuration"
+  shell: "echo instance_id: {{instanceid.stdout}} > creatingImg/vars/main.yml"

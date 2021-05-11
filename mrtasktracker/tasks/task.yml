@@ -1,0 +1,9 @@
+- name: "Configuring mapred-site.xml file"
+  template:
+        src: "mapred-site.xml"
+        dest: "/etc/hadoop/mapred-site.xml"
+- name: "Starting the Job Tracker"
+  shell: "hadoop-daemon.sh start tasktracker"
+- name: "Starting Permanently if you shutdown again start it will work"
+  shell: "echo hadoop-daemon.sh start tasktracker >> /root/.bashrc"
+

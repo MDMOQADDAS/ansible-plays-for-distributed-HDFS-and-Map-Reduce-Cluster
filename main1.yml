@@ -1,0 +1,5 @@
+# This play run the maininstance roles means install one instance
+
+- hosts: localhost
+  roles:
+    - maininstance

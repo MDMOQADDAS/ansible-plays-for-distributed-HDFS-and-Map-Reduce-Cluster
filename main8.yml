@@ -1,0 +1,4 @@
+- hosts: tag_Name_Map_Reduce_Task_Tracker
+  roles:
+   - mrtasktracker
+

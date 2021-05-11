@@ -1,0 +1,4 @@
+---
+# tasks file for instances
+- name: "Including the task to Launch Instances"
+  include_tasks: "lauchinstances.yml"

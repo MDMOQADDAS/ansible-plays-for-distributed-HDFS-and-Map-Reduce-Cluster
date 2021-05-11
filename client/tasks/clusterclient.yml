@@ -1,0 +1,8 @@
+- name: "Configure core-site.xml file"
+  template:
+        src: "core-site.xml"
+        dest: "/etc/hadoop/core-site.xml"
+- name: "Configuring mapred-site.xml file"
+  template:
+        src: "mapred-site.xml"
+        dest: "/etc/hadoop/mapred-site.xml"

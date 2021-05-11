@@ -1,0 +1,3 @@
+# tasks file for mrjobtracker
+- name: "Including the task to configure Job  Tracker"
+  include_tasks: "job.yml"

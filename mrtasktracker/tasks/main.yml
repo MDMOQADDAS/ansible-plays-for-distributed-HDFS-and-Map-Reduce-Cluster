@@ -1,0 +1,3 @@
+# tasks file for mrtasktracker
+- name: "Including the task to configure Map-Reduce Task Tracker"
+  include_tasks: "task.yml"

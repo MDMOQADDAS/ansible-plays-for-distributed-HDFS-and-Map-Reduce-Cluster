@@ -1,0 +1,4 @@
+---
+# tasks file for creatingImg
+- name: "Including the task to Create AMI"
+  include_tasks: "ec2img.yml"

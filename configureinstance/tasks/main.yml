@@ -1,0 +1,4 @@
+---
+# tasks file for configureinstance
+- name: "Including the task to donwnload Hadoop & JDK"
+  include_tasks: "cinstance.yml"

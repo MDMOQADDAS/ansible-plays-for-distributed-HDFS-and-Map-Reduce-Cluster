@@ -25,8 +25,20 @@ Step 1 : Install below packages
 1. pip3 install awscli <br/><br/>
 2. pip3 install boto3 <br/><br/>
 3. pip3 install boto <br/><br/>
-Note -:) To download above package you must download python installer or update it.
+Note -:) To download above package you must download python installer or update it.<br/><br/>
 
+4. To download this package you need to visit the below url from your browser.<br>
+   https://www.oracle.com/in/java/technologies/javase/javase8-archive-downloads.html
+   ![image](https://user-images.githubusercontent.com/69861558/118344761-ad53ed80-b54d-11eb-8474-cf692239623e.png)
+    After visit you'll see this page, Just go below and find
+    ![image](https://user-images.githubusercontent.com/69861558/118344801-eb511180-b54d-11eb-93dc-c9a995af6d5b.png)
+Just click on it
+![image](https://user-images.githubusercontent.com/69861558/118344825-00c63b80-b54e-11eb-8afd-6eb728f53963.png)
+After this login or create new account to download this package <br>
+
+Note -:) You can download this package any where only you have to copy this package where you clone this repo, *configureinstance/files*
+   
+   
 Step 2 : Create an AWS IAM user and assign EC2 permission or you can assign the common "power user access", It releated to your AWS account Security so that how to manage its your choice.
 -------------------------------
 

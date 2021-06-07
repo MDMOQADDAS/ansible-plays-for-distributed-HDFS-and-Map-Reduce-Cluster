@@ -25,7 +25,7 @@ Step 1 : Install below packages
 1. pip3 install awscli <br/><br/>
 2. pip3 install boto3 <br/><br/>
 3. pip3 install boto <br/><br/>
-4. pip3 install boto <br/><br/>
+
 Note -:) To download above package you must download python installer or update it.<br/><br/>
 
 4. To download this package you need to visit the below url from your browser.<br>
